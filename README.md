@@ -1,34 +1,61 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Minimalistic blog based on Next.js and .md files.
 
-## Getting Started
+The main idea is that your posts will be stored locally as .md files. You don't need to use any external CMS service. This approach makes your website hard to hack. 
 
-First, run the development server:
+### Planned features
+- [x] TypeScript support
+- [x] Server-side rendering
+- [ ] Import posts from .md files
+- [ ] Category and tags support
+- [ ] Use React testing library
+- [ ] Custom 404 page
 
+## Quick setup
+1. Clone repository `gh repo clone yrogovich/adchitects-task`
+2. Install dependencies `yarn install`
+3. Rename `.env.local.example` to `.env.local`
+4. Run develompent server `yarn dev`
+5. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+   
+Availible commands:
 ```bash
-npm run dev
-# or
 yarn dev
+yarn build
+yarn start
+yarn lint
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Commit tags
+`[global]` - project global changes, config updates
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+`[npm]` - add/remove/update packages
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+`[docs]` - update docs, readme
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+`[style]` - style updates
 
-## Learn More
+`[rwd]` - adaptive updates
 
-To learn more about Next.js, take a look at the following resources:
+`[api]` - api updates
+
+`[public]` - public images, fonts and etc updates
+
+`[page]` - page updates
+
+`[section]` - section updates
+
+`[component]` - component updates
+
+## Versions
+| Tool | Version |
+|------|---------|
+| Node | 18.7.0  |
+| Yarn | 1.22.19 |
+
+## Useful resources
 
 - [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- [Typescript](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html) - TypeScript quick start guide.
+- [Color name](https://www.color-blindness.com/color-name-hue/) - Hex color naming tool.
+- [Favicon generator](https://realfavicongenerator.net/)
+- [Atomic categorizer](https://dan503.github.io/Atomic-Categorizer/)
