@@ -1,8 +1,9 @@
-import Post from '../interfaces/post'
+import type PostType from '../interfaces/PostType'
 import {getAllPosts} from "./api/posts";
+import Link from "next/link";
 
 type Props = {
-  allPosts: Post[]
+  allPosts: PostType[]
 }
 
 export default function Index({ allPosts }: Props) {
@@ -11,10 +12,13 @@ export default function Index({ allPosts }: Props) {
      <h1>Hello blog</h1>
      <p>This is a blog</p>
        {allPosts.map(post => (
-         <div key={post.slug}>
-              <h2>{post.title}</h2>
-                <p>{post.excerpt}</p>
-         </div>
+           <>
+               <Link as={`/posts/${post.slug}`} href="/posts/[slug]">
+                   <h2>{post.title}</h2>
+               </Link>
+
+               <p>{post.excerpt}</p>
+           </>
        ))}
    </div>
   )
