@@ -5,17 +5,16 @@ The main idea is that your posts will be stored locally as .md files. You don't 
 ### Planned features
 - [x] TypeScript support
 - [x] Server-side rendering
-- [ ] Import posts from .md files
+- [X] Import posts from .md files
 - [ ] Category and tags support
 - [ ] Use React testing library
 - [ ] Custom 404 page
 
 ## Quick setup
-1. Clone repository `gh repo clone yrogovich/adchitects-task`
+1. Clone repository `gh repo clone yrogovich/next-blog`
 2. Install dependencies `yarn install`
-3. Rename `.env.local.example` to `.env.local`
-4. Run develompent server `yarn dev`
-5. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3. Run develompent server `yarn dev`
+4. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
    
 Availible commands:
 ```bash
@@ -39,6 +38,8 @@ yarn lint
 `[api]` - api updates
 
 `[public]` - public images, fonts and etc updates
+
+`[posts]` - blog posts updates
 
 `[page]` - page updates
 
