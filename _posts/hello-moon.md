@@ -1,7 +1,7 @@
 ---
 title: 'Hello moon'
 excerpt: 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget.'
-coverImage: '/assets/blog/hello-world/cover.jpg'
+coverImage: '/assets/blog/hello-moon/cover.jpg'
 date: '2022-08-16'
 ---
 
