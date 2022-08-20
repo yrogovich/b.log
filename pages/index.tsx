@@ -1,6 +1,7 @@
 import type PostType from '../interfaces/PostType'
-import {getAllPosts} from "./api/posts";
-import Link from "next/link";
+import {getAllPosts} from "./api/posts"
+import Link from "next/link"
+import Layout from "../components/organisms/Layout";
 
 type Props = {
   allPosts: PostType[]
@@ -8,19 +9,21 @@ type Props = {
 
 export default function Index({ allPosts }: Props) {
   return (
-   <div>
-     <h1>Hello blog</h1>
-     <p>This is a blog</p>
-       {allPosts.map(post => (
-           <>
-               <Link as={`/posts/${post.slug}`} href="/posts/[slug]">
-                   <h2>{post.title}</h2>
-               </Link>
+   <Layout>
+       <div className="container">
+         <h1>Hello blog</h1>
+         <p>This is a blog</p>
+           {allPosts.map(post => (
+               <>
+                   <Link as={`/posts/${post.slug}`} href="/posts/[slug]">
+                       <h2>{post.title}</h2>
+                   </Link>
 
-               <p>{post.excerpt}</p>
-           </>
-       ))}
-   </div>
+                   <p>{post.excerpt}</p>
+               </>
+           ))}
+        </div>
+   </Layout>
   )
 }
 
