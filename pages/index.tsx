@@ -1,7 +1,7 @@
 import type PostType from '../interfaces/PostType'
 import {getAllPosts} from "./api/posts"
 import Link from "next/link"
-import Layout from "../components/organisms/Layout";
+import Layout from "../components/organisms/Layout"
 
 type Props = {
   allPosts: PostType[]
