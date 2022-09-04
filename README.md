@@ -6,7 +6,7 @@ The main idea is that your posts will be stored locally as .md files. You don't 
 - [x] TypeScript support
 - [x] Server-side rendering
 - [X] Import posts from .md files
-- [ ] Dark theme support
+- [X] Dark theme support
 - [ ] Category and tags support
 - [ ] Use React testing library
 - [ ] Custom 404 page
