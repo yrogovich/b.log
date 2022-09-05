@@ -1,0 +1,118 @@
+@import "styles/utills";
+
+.toggleButton {
+  --size: 2rem;
+  --icon-fill: hsl(210 10% 30%);
+  --icon-fill-hover: hsl(210 10% 15%);
+
+  background: none;
+  border: none;
+  padding: 0;
+
+  inline-size: var(--size);
+  block-size: var(--size);
+  aspect-ratio: 1;
+  border-radius: 50%;
+
+  cursor: pointer;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+
+  outline-offset: 5px;
+
+  > svg {
+    inline-size: 100%;
+    block-size: 100%;
+    stroke-linecap: round;
+  }
+
+  @include dark {
+    --icon-fill: hsl(210 10% 70%);
+    --icon-fill-hover: hsl(210 15% 90%);
+  }
+
+  @media (hover: none) {
+    --size: 48px;
+  }
+
+  &:is(:hover, :focus-visible) > .sunAndMoon > :is(.moon, .sun) {
+    fill: var(--icon-fill-hover)
+  }
+
+  &:is(:hover, :focus-visible) .sunAndMoon > .sunBeams {
+    stroke: var(--icon-fill-hover)
+  }
+}
+
+.sunAndMoon {
+  & > :is(.moon, .sun, .sunBeams) {
+    transform-origin: center center;
+  }
+
+  & > :is(.moon, .sun) {
+    fill: var(--icon-fill)
+  }
+
+  & > :is(.moon, .sun) {
+    fill: var(--icon-fill)
+  }
+
+  & > .sunBeams {
+    stroke: var(--icon-fill);
+    stroke-width: 2px
+  }
+
+  @include dark {
+    & > .sun {
+      transform: scale(1.75);
+    }
+
+    & > .sunBeams {
+      opacity: 0;
+    }
+
+    & > .moon > circle {
+      transform: translateX(-7px)
+    }
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    > .sun {
+      transition: transform .5s cubic-bezier(.5, 1.25, .75, 1.25);
+    }
+
+    > .sunBeams {
+      transition: transform .5s cubic-bezier(.5, 1.5, .75, 1.25),
+      opacity .5s cubic-bezier(.25, 0, .3, 1);
+    }
+
+    .moon > circle {
+      transition: transform .25s cubic-bezier(0, 0, 0, 1)
+    }
+
+    @include dark {
+      & > .sun {
+        transform: scale(1.75);
+        transition-timing-function: cubic-bezier(.25, 0, .3, 1);
+        transition-duration: .25s;
+      }
+
+      & > .sunBeams {
+        transform: rotateZ(-25deg);
+        transition-duration: .15s;
+      }
+
+      & > .moon > circle {
+        transition-delay: .25s;
+        transition-duration: .5s;
+      }
+    }
+  }
+}
+
+@supports (cx: 1) {
+  [data-theme="dark"] .sunAndMoon > .moon > circle {
+    transform: translateX(0);
+    cx: 17
+  }
+}

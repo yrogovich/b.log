@@ -1,5 +1,6 @@
 import {useRef} from 'react'
 import {useTheme} from 'next-themes'
+import styles from './ThemeToggle.module.scss'
 
 const ThemeToggle = () => {
   const toggleButton = useRef(null)
@@ -7,14 +8,12 @@ const ThemeToggle = () => {
   const {theme, setTheme} = useTheme()
 
   function onClick() {
-    console.log(theme)
-
     setTheme(theme === 'dark' ? 'light' : 'dark')
   }
 
   return (
     <>
-      <button className="theme-toggle"
+      <button className={styles.toggleButton}
               id="theme-toggle"
               title="Toggles light & dark"
               aria-label="auto"
@@ -22,13 +21,13 @@ const ThemeToggle = () => {
               onClick={onClick}
               ref={toggleButton}
       >
-        <svg className="sun-and-moon" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24">
-          <mask className="moon" id="moon-mask">
+        <svg className={styles.sunAndMoon} aria-hidden="true" width="24" height="24" viewBox="0 0 24 24">
+          <mask className={styles.moon} id="moon-mask">
             <rect x="0" y="0" width="100%" height="100%" fill="white"/>
             <circle cx="24" cy="10" r="6" fill="black"/>
           </mask>
-          <circle className="sun" cx="12" cy="12" r="6" mask="url(#moon-mask)" fill="currentColor"/>
-          <g className="sun-beams" stroke="currentColor">
+          <circle className={styles.sun} cx="12" cy="12" r="6" mask="url(#moon-mask)" fill="currentColor"/>
+          <g className={styles.sunBeams} stroke="currentColor">
             <line x1="12" y1="1" x2="12" y2="3"/>
             <line x1="12" y1="21" x2="12" y2="23"/>
             <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
