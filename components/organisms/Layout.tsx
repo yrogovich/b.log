@@ -1,16 +1,18 @@
-import Footer from "./Footer"
+import Footer from './Footer'
+import Navbar from './Navbar'
 
 type Props = {
-    children: React.ReactNode
+  children: React.ReactNode
 }
 
-const Layout = ({ children }: Props) => {
-    return (
-        <>
-            <main>{children}</main>
-            <Footer />
-        </>
-    )
+const Layout = ({children}: Props) => {
+  return (
+    <>
+      <Navbar/>
+      <main>{children}</main>
+      <Footer/>
+    </>
+  )
 }
 
 export default Layout
