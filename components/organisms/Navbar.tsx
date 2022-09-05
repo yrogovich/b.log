@@ -1,4 +1,4 @@
-import ThemeToggle from '../atoms/ThemeToggle'
+import ThemeToggle from '../atoms/ThemeToggle/ThemeToggle'
 import Link from 'next/link'
 
 const Navbar = () => {

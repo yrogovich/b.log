@@ -1,6 +1,5 @@
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faGithubAlt} from '@fortawesome/free-brands-svg-icons'
-import ThemeToggle from '../atoms/ThemeToggle'
 
 const Footer = () => {
   return (
@@ -11,13 +10,12 @@ const Footer = () => {
           <FontAwesomeIcon icon={faGithubAlt}/> yrogovich
         </a>
         </div>
-        <ThemeToggle/>
       </footer>
       <style jsx>{`
         .footer {
           padding: 1rem;
-          background-color: #f5f5f5;
           text-align: center;
+          margin-top: auto;
         }
       `}</style>
     </>
