@@ -1,7 +1,7 @@
 import type PostType from '../interfaces/PostType'
 import {getAllPosts} from './api/posts'
-import Link from 'next/link'
 import Layout from '../components/organisms/Layout'
+import BlogAnnounce from '@/components/molecules/BlogAnnounce/BlogAnnounce'
 
 // inspiration notion app
 
@@ -13,15 +13,10 @@ export default function Index({allPosts}: Props) {
   return (
     <Layout>
       <div className="container">
-        <h1>Articles:</h1>
-        {allPosts.map(post => (
-          <>
-            <Link as={`/posts/${post.slug}`} href="/posts/[slug]">
-              <h2>{post.title}</h2>
-            </Link>
+        <h1 className="h1">Articles:</h1>
 
-            <p>{post.excerpt}</p>
-          </>
+        {allPosts.map(post => (
+          <BlogAnnounce key={post.slug} post={post}/>
         ))}
       </div>
     </Layout>
@@ -31,6 +26,7 @@ export default function Index({allPosts}: Props) {
 export const getStaticProps = async () => {
   const allPosts = getAllPosts([
     'title',
+    'icon',
     'date',
     'slug',
     'coverImage',

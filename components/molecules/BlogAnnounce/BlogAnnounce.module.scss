@@ -1,0 +1,48 @@
+@import "styles/utills";
+
+.announce {
+  @include fluid-spacing('margin-bottom', 20, 74);
+}
+
+.link {
+  position: relative;
+  cursor: pointer;
+
+  &:after,
+  &:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: $c-text;
+    opacity: 0.16;
+    transition: $trS;
+  }
+
+  &:before {
+    height: 100%;
+    width: 0;
+    transition: $trM;
+  }
+
+  &:after {
+    width: 100%;
+    height: 2px;
+  }
+
+  &:hover {
+    &:before {
+      width: 100%;
+    }
+  }
+}
+
+.title {
+  @include t-60;
+  font-weight: bold;
+}
+
+.text {
+  @include t-30;
+  line-height: 1.5;
+}
