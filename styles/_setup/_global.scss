@@ -19,7 +19,7 @@ body {
 
   @include dark {
     color: white;
-    background-color: black;
+    background-color: $c-text;
   }
 }
 
@@ -42,4 +42,13 @@ a {
   max-width: 960px;
   margin: 0 auto;
   padding: 0 20px;
+}
+
+.link {
+  border-bottom: 1px solid rgba(55, 53, 47, 0.16);
+}
+
+.h1 {
+  @include t-30;
+  font-weight: bold;
 }

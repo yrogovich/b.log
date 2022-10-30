@@ -1,6 +1,16 @@
 @use 'sass:math';
 
-@mixin t-prim-18-30 {
+@mixin t-60 {
+  @include fluid-font(3, 6);
+  line-height: math.div(30, 18);
+}
+
+@mixin t-30 {
+  @include fluid-font(2, 3);
+  line-height: math.div(30, 18);
+}
+
+@mixin t-18 {
   @include fluid-font(1.4, 1.8);
   line-height: math.div(30, 18);
 }
