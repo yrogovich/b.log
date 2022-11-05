@@ -1,6 +1,6 @@
 import type PostType from '../interfaces/PostType'
 import {getAllPosts} from './api/posts'
-import Layout from '../components/organisms/Layout'
+import Layout from '@/components/organisms/Layout/Layout'
 import BlogAnnounce from '@/components/molecules/BlogAnnounce/BlogAnnounce'
 
 // inspiration notion app

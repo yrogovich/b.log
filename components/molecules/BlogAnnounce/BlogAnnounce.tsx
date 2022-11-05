@@ -9,8 +9,7 @@ const BlogAnnounce = ({post}) => {
     <div key={slug} className={styles.announce}>
       <Link as={`/posts/${slug}`} href="/posts/[slug]">
         <h2 className={styles.title}>
-          {icon}
-          <a className={styles.link}>{title}</a>
+          {icon} <a className={styles.link}>{title}</a>
         </h2>
 
       </Link>
