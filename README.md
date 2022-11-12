@@ -12,7 +12,8 @@ This approach makes your website hard to hack.
 - [ ] Category and tags support
 - [ ] Use React testing library
 - [ ] Custom 404 page
-
+- [ ] Update to next 13
+- 
 ## Quick setup
 
 1. Clone repository `gh repo clone yrogovich/next-blog`
