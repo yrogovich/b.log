@@ -1,0 +1,30 @@
+@import "styles/utills";
+
+.article {
+  @include fluid-spacing('margin-bottom', 20, 74);
+  @include t-45;
+
+  &Title {
+    @include t-80;
+    font-weight: bold;
+  }
+
+  h2 {
+    @include t-60;
+    font-weight: bold;
+  }
+
+  h3 {
+    @include t-50;
+    font-weight: bold;
+  }
+
+  h4 {
+    @include t-45;
+    font-weight: bold;
+  }
+
+  p {
+    @include fluid-spacing('margin-bottom', 25, 40);
+  }
+}

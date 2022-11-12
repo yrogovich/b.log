@@ -3,8 +3,6 @@ import {getAllPosts} from './api/posts'
 import Layout from '@/components/organisms/Layout/Layout'
 import BlogAnnounce from '@/components/molecules/BlogAnnounce/BlogAnnounce'
 
-// inspiration notion app
-
 type Props = {
   allPosts: PostType[]
 }

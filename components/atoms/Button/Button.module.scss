@@ -1,0 +1,11 @@
+@import "styles/utills";
+
+.button {
+  position: relative;
+  @include t-30;
+  text-decoration: underline;
+
+  &:hover {
+    text-decoration: none;
+  }
+}

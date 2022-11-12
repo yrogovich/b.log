@@ -1,7 +1,27 @@
 @use 'sass:math';
 
+@mixin t-80 {
+  @include fluid-font(4, 8);
+  line-height: math.div(30, 18);
+}
+
 @mixin t-60 {
   @include fluid-font(3, 6);
+  line-height: math.div(30, 18);
+}
+
+@mixin t-50 {
+  @include fluid-font(3.5, 5.5);
+  line-height: math.div(30, 18);
+}
+
+@mixin t-45 {
+  @include fluid-font(2.5, 4.5);
+  line-height: math.div(30, 18);
+}
+
+@mixin t-35 {
+  @include fluid-font(2.2, 3.5);
   line-height: math.div(30, 18);
 }
 

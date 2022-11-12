@@ -1,10 +1,11 @@
 import {useRouter} from 'next/router'
 import {getAllPosts, getPostBySlug} from 'pages/api/posts'
-import Link from 'next/link'
 import markdownToHtml from 'pages/api/markdownToHtml'
 import type PostType from 'interfaces/PostType'
 import ErrorPage from 'next/error'
 import Layout from '@/components/organisms/Layout/Layout'
+import Button from '@/components/atoms/Button'
+import Article from '@/components/molecules/Article'
 
 type Props = {
   post: PostType,
@@ -28,9 +29,8 @@ export default function Post({post}: Props) {
   return (
     <Layout>
       <div className="container">
-        <h1>{post.title}</h1>
-        <article dangerouslySetInnerHTML={{__html: post.content}}></article>
-        <Link href="/">Go back</Link>
+        <Article {...post} />
+        <Button href="/" variant="primary">Go back</Button>
       </div>
     </Layout>
   )
