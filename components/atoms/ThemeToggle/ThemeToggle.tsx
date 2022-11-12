@@ -1,8 +1,8 @@
-import {useRef} from 'react'
+import React, {useRef} from 'react'
 import {useTheme} from 'next-themes'
 import styles from './ThemeToggle.module.scss'
 
-const ThemeToggle = () => {
+const ThemeToggle: React.FC = () => {
   const toggleButton = useRef(null)
 
   const {theme, setTheme} = useTheme()
