@@ -3,9 +3,10 @@ import {getAllPosts, getPostBySlug} from 'pages/api/posts'
 import markdownToHtml from 'pages/api/markdownToHtml'
 import type PostType from 'interfaces/PostType'
 import ErrorPage from 'next/error'
-import Layout from '@/components/organisms/Layout/Layout'
-import Button from '@/components/atoms/Button'
-import Article from '@/components/molecules/Article'
+import Layout from 'components/organisms/Layout'
+import Button from 'components/atoms/Button'
+import Article from 'components/molecules/Article'
+import {motion} from 'framer-motion'
 
 type Props = {
   post: PostType,

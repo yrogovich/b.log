@@ -1,7 +1,8 @@
-import type PostType from '../interfaces/PostType'
-import {getAllPosts} from './api/posts'
-import Layout from '@/components/organisms/Layout/Layout'
-import BlogAnnounce from '@/components/molecules/BlogAnnounce/BlogAnnounce'
+import type PostType from 'interfaces/PostType'
+import {getAllPosts} from 'pages/api/posts'
+import Layout from 'components/organisms/Layout'
+import BlogAnnounce from 'components/molecules/BlogAnnounce'
+import {motion} from 'framer-motion'
 
 type Props = {
   allPosts: PostType[]

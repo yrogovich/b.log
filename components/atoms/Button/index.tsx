@@ -1,6 +1,13 @@
 import styles from './Button.module.scss'
-import {ButtonModel} from '@/components/atoms/Button/Button.model'
 import React from 'react'
+
+export interface ButtonModel {
+  href?: string
+  children: React.ReactNode
+  variant?: 'primary' | 'secondary'
+
+  [key: string]: any
+}
 
 const Button: React.FC<ButtonModel> = ({
   href,
