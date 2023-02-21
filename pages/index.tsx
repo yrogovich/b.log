@@ -1,21 +1,62 @@
-import type PostType from '../interfaces/PostType'
-import {getAllPosts} from './api/posts'
-import Layout from '@/components/organisms/Layout/Layout'
-import BlogAnnounce from '@/components/molecules/BlogAnnounce/BlogAnnounce'
+import type PostType from 'interfaces/PostType'
+import {getAllPosts} from 'pages/api/posts'
+import Layout from 'components/organisms/Layout'
+import BlogAnnounce from 'components/molecules/BlogAnnounce'
+import {motion} from 'framer-motion'
 
 type Props = {
   allPosts: PostType[]
 }
 
 export default function Index({allPosts}: Props) {
+  const h1Animation = {
+    hidden: {
+      opacity: 0,
+    },
+    show: {
+      opacity: 1,
+    },
+    exit: {
+      y: -100,
+      opacity: 0,
+    },
+  }
+
+  const containerAnimation = {
+    hidden: {
+      opacity: 0,
+    },
+    show: {
+      opacity: 1,
+    },
+    exit: {},
+  }
+
   return (
     <Layout>
       <div className="container">
-        <h1 className="h1">Articles:</h1>
+        <motion.h1
+          className="h1"
+          variants={h1Animation}
+          initial="hidden"
+          animate="show"
+          exit="exit"
+        >Articles:
+        </motion.h1>
 
-        {allPosts.map(post => (
-          <BlogAnnounce key={post.slug} post={post}/>
-        ))}
+        <motion.div
+          variants={containerAnimation}
+          initial="hidden"
+          animate="show"
+          exit="exit"
+          transition={{
+            staggerChildren: .2,
+          }}
+        >
+          {allPosts.map(post => (
+            <BlogAnnounce key={post.slug} post={post}/>
+          ))}
+        </motion.div>
       </div>
     </Layout>
   )

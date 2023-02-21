@@ -9,7 +9,7 @@ const Navbar = () => {
         <div className="container">
           <div className={styles.row}>
             <div className={styles.logo}>
-              <Link href="/pages">{process.env.NEXT_PUBLIC_BLOG_NAME}</Link>
+              <Link href="/">{process.env.NEXT_PUBLIC_BLOG_NAME}</Link>
             </div>
             <ThemeToggle/>
           </div>

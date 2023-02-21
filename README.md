@@ -12,6 +12,7 @@ This approach makes your website hard to hack.
 - [ ] Category and tags support
 - [ ] Use React testing library
 - [ ] Custom 404 page
+- [ ] Update to next 13
 
 ## Quick setup
 
@@ -80,30 +81,6 @@ Add BREAKING CHANGE in the description if there is a significant change.
 - Use imperative, and present tense: "change" not "changed" or "changes"
 - Don't use capitals in front of the sentence
 - Don't add full stop (.) at the end of the sentence
-
-#### Old Commit tags (deprecated)
-
-`[global]` - project global changes, config updates
-
-`[npm]` - add/remove/update packages
-
-`[docs]` - update docs, readme
-
-`[style]` - style updates
-
-`[rwd]` - adaptive updates
-
-`[api]` - api updates
-
-`[public]` - public images, fonts and etc updates
-
-`[posts]` - blog posts updates
-
-`[page]` - page updates
-
-`[section]` - section updates
-
-`[component]` - component updates
 
 ## Versions
 

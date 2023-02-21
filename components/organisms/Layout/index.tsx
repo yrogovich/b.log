@@ -1,5 +1,6 @@
 import Footer from 'components/organisms/Footer'
 import Navbar from 'components/organisms/Navbar'
+import React from 'react'
 
 type Props = {
   children: React.ReactNode

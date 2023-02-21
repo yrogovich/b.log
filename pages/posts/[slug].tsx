@@ -3,9 +3,10 @@ import {getAllPosts, getPostBySlug} from 'pages/api/posts'
 import markdownToHtml from 'pages/api/markdownToHtml'
 import type PostType from 'interfaces/PostType'
 import ErrorPage from 'next/error'
-import Layout from '@/components/organisms/Layout/Layout'
-import Button from '@/components/atoms/Button'
-import Article from '@/components/molecules/Article'
+import Layout from 'components/organisms/Layout'
+import Button from 'components/atoms/Button'
+import Article from 'components/molecules/Article'
+import {motion} from 'framer-motion'
 
 type Props = {
   post: PostType,
@@ -26,12 +27,40 @@ export default function Post({post}: Props) {
     return <ErrorPage statusCode={404}/>
   }
 
+  const containerAnimation = {
+    hidden: {
+      opacity: 0,
+      y: 200,
+    },
+    show: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        delay: 1,
+        duration: .8,
+        staggerChildren: .3,
+      },
+    },
+    exit: {
+      transition: {
+        duration: .8,
+        staggerChildren: .3,
+      },
+    },
+  }
+
   return (
     <Layout>
-      <div className="container">
+      <motion.div
+        className="container"
+        variants={containerAnimation}
+        initial="hidden"
+        animate="show"
+        exit="exit"
+      >
         <Article {...post} />
         <Button href="/" variant="primary">Go back</Button>
-      </div>
+      </motion.div>
     </Layout>
   )
 }
