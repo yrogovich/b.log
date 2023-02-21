@@ -17,7 +17,6 @@ export default function MyApp({Component, pageProps}: AppProps) {
         <motion.div
           key={router.asPath}
           exit={{
-            height: 0,
             transition: {
               duration: 0,
             },
