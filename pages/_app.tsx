@@ -8,6 +8,7 @@ import 'styles/index.scss'
 
 config.autoAddCss = false
 
+
 export default function MyApp({Component, pageProps}: AppProps) {
   const router = useRouter()
 

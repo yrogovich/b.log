@@ -10,7 +10,6 @@ html {
 body {
   transition: background-color 0.2s ease-in;
   color: $c-text;
-  font-family: $f-prim;
   font-size: $fs-base;
 
   &::-webkit-scrollbar {
