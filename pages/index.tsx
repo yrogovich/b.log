@@ -53,7 +53,7 @@ export default function Index({allPosts}: Props) {
             staggerChildren: .2,
           }}
         >
-          {allPosts.map(post => (
+          {allPosts?.map(post => (
             <BlogAnnounce key={post.slug} post={post}/>
           ))}
         </motion.div>
