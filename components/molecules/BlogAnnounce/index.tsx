@@ -62,7 +62,7 @@ const BlogAnnounce = ({post}) => {
           className={styles.title}
           variants={linkAnimation}
         >
-          {icon} <a className={styles.link}>{title}</a>
+          {icon} <span className={styles.link}>{title}</span>
         </motion.h2>
       </Link>
 

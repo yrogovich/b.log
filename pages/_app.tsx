@@ -6,7 +6,15 @@ import {useRouter} from 'next/router'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 import 'styles/index.scss'
 
+import {Raleway} from 'next/font/google'
+
 config.autoAddCss = false
+
+const inter = Raleway({
+  weight: ['400', '700'],
+  subsets: ['latin'],
+})
+
 
 export default function MyApp({Component, pageProps}: AppProps) {
   const router = useRouter()
@@ -23,7 +31,9 @@ export default function MyApp({Component, pageProps}: AppProps) {
             },
           }}
         >
-          <Component {...pageProps} />
+          <main className={inter.className}>
+            <Component {...pageProps} />
+          </main>
         </motion.div>
       </AnimatePresence>
     </ThemeProvider>
