@@ -19,14 +19,6 @@ const BlogAnnounce = ({post}) => {
         staggerChildren: .2,
       },
     },
-    exit: {
-      opacity: 0,
-      y: -100,
-      transition: {
-        duration: .5,
-        staggerChildren: .2,
-      },
-    },
   }
 
   const linkAnimation = {

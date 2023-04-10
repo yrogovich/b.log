@@ -21,18 +21,12 @@ export default function MyApp({Component, pageProps}: AppProps) {
 
   return (
     <ThemeProvider>
-      <AnimatePresence mode={'wait'}>
+      <AnimatePresence>
         <motion.div
           key={router.asPath}
-          exit={{
-            transition: {
-              duration: 0,
-            },
-          }}
+          className={inter.className}
         >
-          <main className={inter.className}>
-            <Component {...pageProps} />
-          </main>
+          <Component {...pageProps} />
         </motion.div>
       </AnimatePresence>
     </ThemeProvider>

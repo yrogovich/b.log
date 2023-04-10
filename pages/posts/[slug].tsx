@@ -41,12 +41,7 @@ export default function Post({post}: Props) {
         staggerChildren: .3,
       },
     },
-    exit: {
-      transition: {
-        duration: .8,
-        staggerChildren: .3,
-      },
-    },
+    exit: {},
   }
 
   return (
