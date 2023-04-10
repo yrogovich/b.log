@@ -49,7 +49,9 @@ export default function Index({allPosts}: Props) {
           initial="hidden"
           animate="show"
           exit="exit"
-          transition={{}}
+          transition={{
+            staggerChildren: .2,
+          }}
         >
           {allPosts?.map(post => (
             <BlogAnnounce key={post.slug} post={post}/>

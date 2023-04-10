@@ -26,7 +26,7 @@ export default function MyApp({Component, pageProps}: AppProps) {
           key={router.asPath}
           exit={{
             transition: {
-              duration: 0,
+              duration: 1,
             },
           }}
         >
