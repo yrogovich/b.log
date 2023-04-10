@@ -21,10 +21,11 @@ export default function MyApp({Component, pageProps}: AppProps) {
 
   return (
     <ThemeProvider>
-      <AnimatePresence>
+      <AnimatePresence mode={'wait'}>
         <motion.div
           key={router.asPath}
           exit={{
+            position: 'absolute',
             transition: {
               duration: 1,
             },
