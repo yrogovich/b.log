@@ -1,7 +1,8 @@
 @import "styles/utills";
 
 .announce {
-  @include fluid-spacing('margin-bottom', 20, 74);
+  display: block;
+  margin-bottom: 4rem;
 }
 
 .link {
@@ -38,10 +39,10 @@
 }
 
 .title {
-  @include t-60;
+  font-size: 6rem;
   font-weight: bold;
 }
 
 .text {
-  @include t-30;
+  font-size: 3rem;
 }

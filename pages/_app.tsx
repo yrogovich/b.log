@@ -25,9 +25,8 @@ export default function MyApp({Component, pageProps}: AppProps) {
         <motion.div
           key={router.asPath}
           exit={{
-            position: 'absolute',
             transition: {
-              duration: 1,
+              duration: 0,
             },
           }}
         >
