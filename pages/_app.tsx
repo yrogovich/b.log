@@ -20,15 +20,15 @@ export default function MyApp({Component, pageProps}: AppProps) {
   const router = useRouter()
 
   return (
-    <ThemeProvider>
-      <AnimatePresence>
-        <motion.div
-          key={router.asPath}
-          className={inter.className}
-        >
+    <AnimatePresence>
+      <motion.div
+        key={router.asPath}
+        className={inter.className}
+      >
+        <ThemeProvider>
           <Component {...pageProps} />
-        </motion.div>
-      </AnimatePresence>
-    </ThemeProvider>
+        </ThemeProvider>
+      </motion.div>
+    </AnimatePresence>
   )
 }
