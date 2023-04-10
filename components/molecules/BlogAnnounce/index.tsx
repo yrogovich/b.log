@@ -16,7 +16,6 @@ const BlogAnnounce = ({post}) => {
       y: 0,
       transition: {
         duration: .5,
-        staggerChildren: .2,
       },
     },
   }
